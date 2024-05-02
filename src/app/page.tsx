@@ -1,7 +1,10 @@
-import { getPokemonList } from "./api/pokemonAPI";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
-  const pokemonList = await getPokemonList();
-  console.log(pokemonList);
-  return <div>Pokedex</div>;
+  return (
+    <>
+      <Link href={"/pokemon-list"}>Enter the Pokedex</Link>
+    </>
+  );
 }
