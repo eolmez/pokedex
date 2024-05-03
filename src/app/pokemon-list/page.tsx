@@ -1,3 +1,4 @@
+import Pagination from "@/components/Pagination";
 import { getPokemonList } from "../api/pokemonAPI";
 import PokemonListCard from "@/components/PokemonListCard";
 
@@ -17,6 +18,7 @@ export default async function PokemonList({ searchParams }: any) {
           </div>
         ))}
       </div>
+      <Pagination pageNumber={Number(pageNumber)} />
     </div>
   );
 }

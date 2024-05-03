@@ -1,0 +1,41 @@
+.pokedex {
+  position: relative;
+}
+
+.pokedexScreen {
+  position: absolute;
+  top: 220px;
+  left: 255px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.linkText {
+  color: #39b54a;
+  animation: grow 1s linear infinite;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.alert {
+  position: absolute;
+  border-radius: 100%;
+  width: 43px;
+  height: 43px;
+  top: 138px;
+  left: 243px;
+}
