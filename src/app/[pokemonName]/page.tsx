@@ -13,8 +13,9 @@ export default async function PokemonDetailPage({
   return (
     <>
       <PokemonDetailCard
-        image={pokemonDetail.sprites.other["official-artwork"].front_default}
         name={pokemonName}
+        id={pokemonDetail.id}
+        image={pokemonDetail.sprites.other.dream_world.front_default}
         types={pokemonDetail.types}
       />
     </>

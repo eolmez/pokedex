@@ -1,45 +1,49 @@
-import { getUpperCaseName } from "@/utils/helpers";
+import { generateIdString, getUpperCaseName } from "@/utils/helpers";
 import React, { CSSProperties } from "react";
 
 interface PokemonDetailCardProps {
-  image: string;
   name: string;
+  id: number;
+  image: string;
   types: any[];
 }
 
-const divStyle: CSSProperties = { width: "18rem" };
+const divStyle: CSSProperties = { maxWidth: "540px" };
 
 const PokemonDetailCard: React.FC<PokemonDetailCardProps> = ({
-  image,
   name,
+  id,
+  image,
   types,
 }) => {
   return (
-    <div className="container d-flex justify-content-center align-items-center">
-      <div className="card mt-5 border border-danger" style={divStyle}>
-        <img src={image} className="card-img-top" alt={name} />
-        <div className="card-body">
-          <h5 className="card-title">{getUpperCaseName(name)}</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the content.
-          </p>
-        </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">An item</li>
-          <li className="list-group-item">A second item</li>
-          <li className="list-group-item">A third item</li>
-        </ul>
-        <div className="card-body">
-          {types.map((type) => (
-            <a
-              key={type.type.name}
-              href="#"
-              className="card-link text-decoration-none"
-            >
-              {getUpperCaseName(type.type.name)}
-            </a>
-          ))}
+    <div className="container col-6 d-flex flex-column justify-content-center align-items-center">
+      <div className="d-flex">
+        <p className="fs-2 fw-semibold">{getUpperCaseName(name)}</p>
+        <p className="text-secondary fs-2 fw-semibold">
+          {generateIdString(id)}
+        </p>
+      </div>
+      <div className="card mb-3" style={divStyle}>
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img src={image} className="img-fluid rounded-start" alt={name} />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">{getUpperCaseName(name)}</h5>
+              <p className="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p className="card-text">
+                <small className="text-body-secondary">
+                  Last updated 3 mins ago
+                </small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
