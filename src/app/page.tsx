@@ -10,8 +10,8 @@ export default async function Home() {
         <Image src={pokedex} alt="pokedex" width={700} height={700} />
         <span className={styles.alert}></span>
         <div className={styles.pokedexScreen}>
-          <Link className={styles.linkText} href={"/pokemon-list"}>
-            Go to Pokedex
+          <Link href={"/pokemon-list"}>
+            <p className={styles.linkText}>Go to Pokedex</p>
           </Link>
         </div>
       </div>

@@ -14,8 +14,12 @@ const Pagination = ({ pageNumber }: PaginationProps) => {
     >
       <ul className="pagination">
         <li className={disabledClass}>
-          <Link className="page-link" href={pageNumber > 1 ? previousPage : ""}>
-            Previous
+          <Link
+            className="page-link"
+            href={pageNumber > 1 ? previousPage : ""}
+            aria-label="Previous"
+          >
+            <span aria-hidden="true">&laquo;</span>
           </Link>
         </li>
         <li className="page-item active">
@@ -35,8 +39,8 @@ const Pagination = ({ pageNumber }: PaginationProps) => {
           </Link>
         </li>
         <li className="page-item">
-          <Link className="page-link" href={nextPage}>
-            Next
+          <Link className="page-link" href={nextPage} aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
           </Link>
         </li>
       </ul>
