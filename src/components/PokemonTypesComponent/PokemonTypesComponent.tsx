@@ -1,7 +1,7 @@
 import { typeColors } from "@/app/colorVariants";
 import { colorSelector, getUpperCaseName } from "@/utils/helpers";
 
-const PokemonTypeComponent = ({ types }: any) => {
+const PokemonTypesComponent = ({ types }: any) => {
   return (
     <div className="d-flex gap-2">
       {types.map((type: any, index: number) => {
@@ -25,4 +25,4 @@ const PokemonTypeComponent = ({ types }: any) => {
   );
 };
 
-export default PokemonTypeComponent;
+export default PokemonTypesComponent;

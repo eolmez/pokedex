@@ -1,6 +1,6 @@
 import { getPokemon } from "../api/pokemonAPI";
-import PokemonDetailCard from "../../components/PokemonDetailCard";
 import Navbar from "@/components/Navbar";
+import PokemonDetailCard from "../../components/PokemonDetailCard";
 
 export default async function PokemonDetailPage({
   params,

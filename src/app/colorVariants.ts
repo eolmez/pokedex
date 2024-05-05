@@ -23,7 +23,7 @@ export const statColors = {
   hp: { bgColor: "bg-danger", color: "#fff" },
   attack: { bgColor: "bg-secondary", color: "#000" },
   defense: { bgColor: "bg-primary", color: "#fff" },
-  special_attack: { bgColor: "bg-bg-body-secondary", color: "#fff" },
-  special_defense: { bgColor: "bg-primary-subtle", color: "#fff" },
+  special_attack: { bgColor: "bg-warning", color: "#fff" },
+  special_defense: { bgColor: "bg-success", color: "#fff" },
   speed: { bgColor: "bg-info", color: "#000" },
 };

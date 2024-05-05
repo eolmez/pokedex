@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { generateIdString, getUpperCaseName } from "@/utils/helpers";
 import Image from "next/image";
-import PokemonTypeComponent from "../PokemonTypeComponent";
+import { generateIdString, getUpperCaseName } from "@/utils/helpers";
+import PokemonTypeComponent from "../PokemonTypesComponent";
 
 interface PokemonListCardProps {
   pokemon: { id: number; name: string; types: any; image: string };
@@ -16,7 +16,7 @@ const PokemonListCard = ({ pokemon }: PokemonListCardProps) => {
         {image && (
           <Image
             src={image}
-            className="card-img-top bg-body-tertiary rounded pt-3 pb-2"
+            className="card-img-top bg-body-tertiary rounded p-3"
             alt={name}
             width={256}
             height={256}
