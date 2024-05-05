@@ -1,12 +1,14 @@
+import PokemonDetailCard from "@/components/PokemonDetailCard";
 import { getPokemon } from "../api/pokemonAPI";
 import Navbar from "@/components/Navbar";
-import PokemonDetailCard from "../../components/PokemonDetailCard";
+
+interface PokemonDetailPageProps {
+  params: { pokemonName: string };
+}
 
 export default async function PokemonDetailPage({
   params,
-}: {
-  params: { pokemonName: string };
-}) {
+}: PokemonDetailPageProps) {
   const { pokemonName } = params;
 
   const pokemonDetail = await getPokemon(pokemonName);

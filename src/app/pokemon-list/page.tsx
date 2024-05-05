@@ -3,7 +3,13 @@ import Navbar from "@/components/Navbar";
 import PokemonListCard from "@/components/PokemonListCard";
 import Pagination from "@/components/Pagination";
 
-export default async function PokemonList({ searchParams }: any) {
+interface PokemonListProps {
+  searchParams: {
+    page?: number;
+  };
+}
+
+export default async function PokemonList({ searchParams }: PokemonListProps) {
   const pageNumber = searchParams.page || 1;
   const pokemonList = await getPokemonList(pageNumber);
 
