@@ -20,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link>
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="https://raw.githubusercontent.com/eolmez/pokedex/master/src/app/favicon.ico"
+      ></link>
       <body className={inter.className}>{children}</body>
     </html>
   );
