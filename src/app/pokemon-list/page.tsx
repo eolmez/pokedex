@@ -1,24 +1,30 @@
 import Pagination from "@/components/Pagination";
 import { getPokemonList } from "../api/pokemonAPI";
 import PokemonListCard from "@/components/PokemonListCard";
+import Navbar from "@/components/Navbar";
 
 export default async function PokemonList({ searchParams }: any) {
   const pageNumber = searchParams.page || 1;
   const pokemonList = await getPokemonList(pageNumber);
 
   return (
-    <div className="container col-lg-8 mt-4">
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        {pokemonList.map((pokemon: any) => (
-          <div
-            className="col col-lg-4 col-md-6 d-flex justify-content-center align-items-center"
-            key={pokemon.id}
-          >
-            <PokemonListCard pokemon={pokemon} />
+    <>
+      <Navbar href="/" label="Back to Pokedex" />
+      <div className="container mt-4">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-9">
+            <div className="row g-4">
+              {pokemonList?.map((pokemon: any) => (
+                <div className="col-12 col-md-4" key={pokemon.id}>
+                  <PokemonListCard pokemon={pokemon} />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
+
+        <Pagination pageNumber={Number(pageNumber)} />
       </div>
-      <Pagination pageNumber={Number(pageNumber)} />
-    </div>
+    </>
   );
 }

@@ -11,7 +11,7 @@ const PokemonTypeComponent = ({ types }: any) => {
           <p
             className="border border-0 rounded text-center fs-6"
             style={{
-              width: "calc((100% - 1rem) / 3)",
+              minWidth: "calc((100% - 1rem) / 3)",
               backgroundColor: bgColor,
               color: color,
             }}

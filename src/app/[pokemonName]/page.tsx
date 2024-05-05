@@ -1,5 +1,6 @@
 import { getPokemon } from "../api/pokemonAPI";
 import PokemonDetailCard from "../../components/PokemonDetailCard";
+import Navbar from "@/components/Navbar";
 
 export default async function PokemonDetailPage({
   params,
@@ -12,6 +13,7 @@ export default async function PokemonDetailPage({
 
   return (
     <>
+      <Navbar href="/pokemon-list" label="Back to PokeList" />
       <PokemonDetailCard pokemonDetail={pokemonDetail} />
     </>
   );

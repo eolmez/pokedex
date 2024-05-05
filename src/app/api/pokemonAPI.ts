@@ -19,7 +19,7 @@ export async function getPokemonList(page: number) {
     id: response.data.id,
     name: response.data.name,
     types: response.data.types,
-    image: response.data.sprites.other.dream_world.front_default,
+    image: response.data.sprites?.other?.["official-artwork"]?.front_default,
   }));
 
   return pokemons;
